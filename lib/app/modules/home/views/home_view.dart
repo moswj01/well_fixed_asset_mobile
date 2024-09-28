@@ -118,7 +118,7 @@ class HomeView extends GetView<HomeController> {
                       width: size.width,
                       height: 45,
                       decoration: BoxDecoration(
-                          color: Color(0xFFFFD900),
+                          color: Color(0xffeb6d00),
                           borderRadius: BorderRadius.circular(12)),
                       child: TextButton.icon(
                           onPressed: () {},
