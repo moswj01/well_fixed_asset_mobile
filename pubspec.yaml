@@ -38,6 +38,7 @@ dependencies:
   get_cli: ^1.8.1
   get: ^4.6.6
   responsive: ^0.3.11+11
+  get_storage: ^2.1.1
   
 
 dev_dependencies:
