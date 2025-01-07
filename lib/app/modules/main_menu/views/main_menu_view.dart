@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:well_fixed_asset_mobile/app/modules/reciving_new_asset/views/reciving_new_asset_view.dart';
 import 'package:well_fixed_asset_mobile/app/modules/setting/views/setting_view.dart';
 
 import '../controllers/main_menu_controller.dart';
@@ -44,236 +45,244 @@ class MainMenuView extends GetView<MainMenuController> {
                           ))
                     ],
                   ),
-                   SingleChildScrollView(
-                child: Container(
-                  width: size.width,
-                  height: size.height / 1.8,
-                  child: GridView.count(
-                    crossAxisCount: 3,
-                    mainAxisSpacing: 8,
-                    crossAxisSpacing: 8,
-                    scrollDirection: Axis.vertical,
-                    children: [
-                      Container(
-                        width: size.width / 5,
-                        height: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            color: Color(0xFF1D6C46)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.add_to_photos,
-                              color: Color(0xffffffff),
-                              size: 50,
+                  SingleChildScrollView(
+                    child: Container(
+                      width: size.width,
+                      height: size.height / 1.8,
+                      child: GridView.count(
+                        crossAxisCount: 3,
+                        mainAxisSpacing: 8,
+                        crossAxisSpacing: 8,
+                        scrollDirection: Axis.vertical,
+                        children: [
+                          InkWell(
+                            onTap: () => Get.to(() => RecivingNewAssetView()),
+                            child: Container(
+                              width: size.width / 5,
+                              height: 100,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12),
+                                  color: Color(0xFF1D6C46)),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.add_to_photos,
+                                    color: Color(0xffffffff),
+                                    size: 50,
+                                  ),
+                                  Text(
+                                    "Receiving new asset",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
                             ),
-                            Text(
-                              "Receiving new asset",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.white),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: size.width / 5,
-                        height: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            color: Color(0xFF1D6C46)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.add_a_photo_rounded,
-                              color: Color(0xffffffff),
-                              size: 50,
+                          ),
+                          Container(
+                            width: size.width / 5,
+                            height: 100,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                color: Color(0xFF1D6C46)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.add_a_photo_rounded,
+                                  color: Color(0xffffffff),
+                                  size: 50,
+                                ),
+                                Text(
+                                  "Assets photo\n",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(color: Colors.white),
+                                )
+                              ],
                             ),
-                            Text(
-                              "Assets photo\n",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.white),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: size.width / 5,
-                        height: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            color: Color(0xFF1D6C46)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.search,
-                              color: Color(0xffffffff),
-                              size: 50,
+                          ),
+                          Container(
+                            width: size.width / 5,
+                            height: 100,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                color: Color(0xFF1D6C46)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.search,
+                                  color: Color(0xffffffff),
+                                  size: 50,
+                                ),
+                                Text(
+                                  "Assets survey photo",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(color: Colors.white),
+                                )
+                              ],
                             ),
-                            Text(
-                              "Assets survey photo",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.white),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: size.width / 5,
-                        height: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            color: Color(0xFF1D6C46)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.sim_card_outlined,
-                              color: Color(0xffffffff),
-                              size: 50,
+                          ),
+                          Container(
+                            width: size.width / 5,
+                            height: 100,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                color: Color(0xFF1D6C46)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.sim_card_outlined,
+                                  color: Color(0xffffffff),
+                                  size: 50,
+                                ),
+                                Text(
+                                  "Asset Control Card",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(color: Colors.white),
+                                )
+                              ],
                             ),
-                            Text(
-                              "Asset Control Card",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.white),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: size.width / 5,
-                        height: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            color: Color(0xFF1D6C46)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.person_pin_outlined,
-                              color: Color(0xffffffff),
-                              size: 50,
+                          ),
+                          Container(
+                            width: size.width / 5,
+                            height: 100,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                color: Color(0xFF1D6C46)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.person_pin_outlined,
+                                  color: Color(0xffffffff),
+                                  size: 50,
+                                ),
+                                Text(
+                                  "Update\ncustodian",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(color: Colors.white),
+                                )
+                              ],
                             ),
-                            Text(
-                              "Update\ncustodian",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.white),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: size.width / 5,
-                        height: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            color: Color(0xFF1D6C46)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.numbers,
-                              color: Color(0xffffffff),
-                              size: 50,
+                          ),
+                          Container(
+                            width: size.width / 5,
+                            height: 100,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                color: Color(0xFF1D6C46)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.numbers,
+                                  color: Color(0xffffffff),
+                                  size: 50,
+                                ),
+                                Text(
+                                  "Update asset serial no.",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(color: Colors.white),
+                                )
+                              ],
                             ),
-                            Text(
-                              "Update asset serial no.",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.white),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: size.width / 5,
-                        height: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            color: Color(0xFF1D6C46)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.check_box_rounded,
-                              color: Color(0xffffffff),
-                              size: 50,
+                          ),
+                          Container(
+                            width: size.width / 5,
+                            height: 100,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                color: Color(0xFF1D6C46)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.check_box_rounded,
+                                  color: Color(0xffffffff),
+                                  size: 50,
+                                ),
+                                Text(
+                                  "Update asset status",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(color: Colors.white),
+                                )
+                              ],
                             ),
-                            Text(
-                              "Update asset status",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.white),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: size.width / 5,
-                        height: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            color: Color(0xFF1D6C46)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.photo_library_outlined,
-                              color: Color(0xffffffff),
-                              size: 50,
+                          ),
+                          Container(
+                            width: size.width / 5,
+                            height: 100,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                color: Color(0xFF1D6C46)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.photo_library_outlined,
+                                  color: Color(0xffffffff),
+                                  size: 50,
+                                ),
+                                Text(
+                                  "Photo management",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(color: Colors.white),
+                                )
+                              ],
                             ),
-                            Text(
-                              "Photo management",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.white),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: size.width / 5,
-                        height: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            color: Color(0xFF1D6C46)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.edit_document,
-                              color: Color(0xffffffff),
-                              size: 50,
+                          ),
+                          Container(
+                            width: size.width / 5,
+                            height: 100,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                color: Color(0xFF1D6C46)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.edit_document,
+                                  color: Color(0xffffffff),
+                                  size: 50,
+                                ),
+                                Text(
+                                  "Data export\n",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(color: Colors.white),
+                                )
+                              ],
                             ),
-                            Text(
-                              "Data export\n",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.white),
-                            )
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ],
+                    ),
                   ),
-                ),
-              ),
                 ],
               ),
             ),
-           
-            TextButton.icon(onPressed: null, label: Text(storage.read("username")),icon: Icon(Icons.person),)
+            TextButton.icon(
+              onPressed: null,
+              label: Text(storage.read("username")),
+              icon: Icon(Icons.person),
+            )
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton.large(
         onPressed: () {
-          Get.to(()=>SettingView());
+          Get.to(() => SettingView());
         },
         shape: CircleBorder(),
         backgroundColor: Color(0xFF1D6C46),
-        child: Icon(Icons.settings,color: Colors.white,size: 50,),
-        
+        child: Icon(
+          Icons.settings,
+          color: Colors.white,
+          size: 50,
+        ),
       ),
-      
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Color(0xFF1D6C46),
